@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: black;
-  background-color: rosybrown;
+  background-color: azure;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -19,7 +19,7 @@ a {
   text-decoration: inherit;
 }
 a:hover {
-  color: gray;
+  color: indigo;
 }
 
 body {
@@ -38,9 +38,6 @@ h1 {
 @media (prefers-color-scheme: light) {
   :root {
     color: black;
-    background-color: rosybrown;
-  }
-  a:hover {
-    color: #747bff;
+    background-color: azure;
   }
 }

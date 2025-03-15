@@ -73,7 +73,10 @@ const Contact = ({ contact }) => {
         aria-label="change"
         onClick={() => dispatch(openEditContact(contact))}
       >
-        <MdEdit />
+        <MdEdit
+          onMouseEnter={(e) => (e.target.style.color = "indigo")}
+          onMouseLeave={(e) => (e.target.style.color = "black")}
+        />
       </IconButton>
       <IconButton
         color="error"
@@ -81,7 +84,10 @@ const Contact = ({ contact }) => {
         onClick={() => dispatch(openConfirmDelete(contact))}
         size="large"
       >
-        <IoClose />
+        <IoClose
+          onMouseEnter={(e) => (e.target.style.color = "indigo")}
+          onMouseLeave={(e) => (e.target.style.color = "black")}
+        />
       </IconButton>
       {content !== null && contact.id === content.id && (
         <ModalWindow onSuccess={onSuccess}>

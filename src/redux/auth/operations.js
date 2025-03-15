@@ -92,7 +92,6 @@ export const refreshUser = createAsyncThunk(
       const token = state.auth.token;
 
       if (token) return true;
-
       return false;
     },
   }

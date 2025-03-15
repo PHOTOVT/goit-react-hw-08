@@ -57,8 +57,19 @@ export const LoginForm = () => {
           onBlur={formik.handleBlur}
           error={formik.touched.email && Boolean(formik.errors.email)}
           helperText={formik.touched.email && formik.errors.email}
-          sx={{ marginBottom: 2 }}
+          sx={{
+            marginBottom: 2,
+            "& label.Mui-focused": { color: "indigo" },
+            "& .MuiOutlinedInput-root": {
+              "&:hover fieldset": { borderColor: "indigo" },
+              "&.Mui-focused fieldset": {
+                borderColor: "indigo",
+                borderWidth: 2,
+              },
+            },
+          }}
         />
+
         <TextField
           fullWidth
           id="password"
@@ -70,9 +81,34 @@ export const LoginForm = () => {
           onBlur={formik.handleBlur}
           error={formik.touched.password && Boolean(formik.errors.password)}
           helperText={formik.touched.password && formik.errors.password}
-          sx={{ marginBottom: 2 }}
+          sx={{
+            marginBottom: 2,
+            "& label.Mui-focused": { color: "indigo" },
+            "& .MuiOutlinedInput-root": {
+              "&:hover fieldset": { borderColor: "indigo" },
+              "&.Mui-focused fieldset": {
+                borderColor: "indigo",
+                borderWidth: 2,
+              },
+            },
+          }}
         />
-        <Button color="primary" variant="contained" fullWidth type="submit">
+
+        <Button
+          color="primary"
+          variant="contained"
+          fullWidth
+          type="submit"
+          sx={{
+            backgroundColor: "black",
+            "&:hover": { backgroundColor: "indigo" },
+            borderRadius: "8px",
+            padding: "12px 16px",
+            fontSize: "16px",
+            fontWeight: "bold",
+            textTransform: "none",
+          }}
+        >
           Submit
         </Button>
       </form>

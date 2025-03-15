@@ -23,7 +23,17 @@ const SearchBox = () => {
         type="text"
         value={filterName}
         onChange={(e) => onFilter(e.target.value)}
-        sx={{ marginBottom: 2 }}
+        sx={{
+          marginBottom: 2,
+          "& label.Mui-focused": { color: "indigo" },
+          "& .MuiOutlinedInput-root": {
+            "&:hover fieldset": { borderColor: "indigo" },
+            "&.Mui-focused fieldset": {
+              borderColor: "indigo",
+              borderWidth: 2,
+            },
+          },
+        }}
       />
     </div>
   );

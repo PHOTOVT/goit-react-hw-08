@@ -30,11 +30,32 @@ const ModalWindow = ({ onSuccess, children }) => {
             onClick={onSuccess}
             variant="contained"
             color="success"
-            sx={{ mr: 2 }}
+            sx={{
+              backgroundColor: "black",
+              "&:hover": { backgroundColor: "indigo" },
+              borderRadius: "8px",
+              padding: "12px 16px",
+              fontSize: "16px",
+              fontWeight: "bold",
+              textTransform: "none",
+              marginRight: "5px",
+            }}
           >
             Confirm
           </Button>
-          <Button onClick={onClose} variant="contained" color="error">
+          <Button
+            onClick={onClose}
+            variant="contained"
+            sx={{
+              backgroundColor: "black",
+              "&:hover": { backgroundColor: "indigo" },
+              borderRadius: "8px",
+              padding: "12px 16px",
+              fontSize: "16px",
+              fontWeight: "bold",
+              textTransform: "none",
+            }}
+          >
             Decline
           </Button>
         </Box>

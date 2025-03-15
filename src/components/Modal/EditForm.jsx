@@ -10,6 +10,17 @@ const EditForm = ({ editedContact, handleEditChange }) => {
         onChange={handleEditChange}
         fullWidth
         margin="normal"
+        sx={{
+          marginBottom: 2,
+          "& label.Mui-focused": { color: "indigo" },
+          "& .MuiOutlinedInput-root": {
+            "&:hover fieldset": { borderColor: "indigo" },
+            "&.Mui-focused fieldset": {
+              borderColor: "indigo",
+              borderWidth: 2,
+            },
+          },
+        }}
       />
       <TextField
         label="New number"
@@ -18,7 +29,17 @@ const EditForm = ({ editedContact, handleEditChange }) => {
         onChange={handleEditChange}
         fullWidth
         margin="normal"
-        sx={{ mb: 2 }}
+        sx={{
+          marginBottom: 2,
+          "& label.Mui-focused": { color: "indigo" },
+          "& .MuiOutlinedInput-root": {
+            "&:hover fieldset": { borderColor: "indigo" },
+            "&.Mui-focused fieldset": {
+              borderColor: "indigo",
+              borderWidth: 2,
+            },
+          },
+        }}
       />
     </form>
   );

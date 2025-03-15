@@ -45,7 +45,17 @@ const ContactForm = () => {
           onBlur={formik.handleBlur}
           error={formik.touched.name && Boolean(formik.errors.name)}
           helperText={formik.touched.name && formik.errors.name}
-          sx={{ marginBottom: 2 }}
+          sx={{
+            marginBottom: 2,
+            "& label.Mui-focused": { color: "indigo" },
+            "& .MuiOutlinedInput-root": {
+              "&:hover fieldset": { borderColor: "indigo" },
+              "&.Mui-focused fieldset": {
+                borderColor: "indigo",
+                borderWidth: 2,
+              },
+            },
+          }}
         />
         <TextField
           fullWidth
@@ -58,9 +68,33 @@ const ContactForm = () => {
           onBlur={formik.handleBlur}
           error={formik.touched.number && Boolean(formik.errors.number)}
           helperText={formik.touched.number && formik.errors.number}
-          sx={{ marginBottom: 2 }}
+          sx={{
+            marginBottom: 2,
+            "& label.Mui-focused": { color: "indigo" },
+            "& .MuiOutlinedInput-root": {
+              "&:hover fieldset": { borderColor: "indigo" },
+              "&.Mui-focused fieldset": {
+                borderColor: "indigo",
+                borderWidth: 2,
+              },
+            },
+          }}
         />
-        <Button color="primary" variant="contained" fullWidth type="submit">
+        <Button
+          color="primary"
+          variant="contained"
+          fullWidth
+          type="submit"
+          sx={{
+            backgroundColor: "black",
+            "&:hover": { backgroundColor: "indigo" },
+            borderRadius: "8px",
+            padding: "12px 16px",
+            fontSize: "16px",
+            fontWeight: "bold",
+            textTransform: "none",
+          }}
+        >
           Add new contact
         </Button>
       </form>
