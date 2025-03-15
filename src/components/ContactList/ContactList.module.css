@@ -1,0 +1,21 @@
+.contactList {
+  width: 100%;
+}
+
+.contactList ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.contactList li {
+  display: flex;
+  list-style-type: none;
+}
+
+@media screen and (max-width: 450px) {
+  .contactList li {
+    width: 100%;
+  }
+}
